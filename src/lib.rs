@@ -31,8 +31,6 @@ static ENV_VARS: &[&str] = &["VISUAL", "EDITOR"];
 #[cfg(not(any(target_os = "windows", target_os = "macos")))]
 #[rustfmt::skip]
 static HARDCODED_NAMES: &[&str] = &[
-    // CLI editors
-    "nano", "pico", "vim", "nvim", "vi", "emacs",
     // GUI editors
     "code", "atom", "subl", "gedit", "gvim",
     // Generic "file openers"
@@ -42,8 +40,6 @@ static HARDCODED_NAMES: &[&str] = &[
 #[cfg(target_os = "macos")]
 #[rustfmt::skip]
 static HARDCODED_NAMES: &[&str] = &[
-    // CLI editors
-    "nano", "pico", "vim", "nvim", "vi", "emacs",
     // open has a special flag to open in the default text editor
     // (this really should come before the CLI editors, but in order
     // not to break compatibility, we still prefer CLI over GUI)
